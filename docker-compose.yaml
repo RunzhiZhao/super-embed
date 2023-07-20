@@ -1,0 +1,25 @@
+version: "3"
+services:
+  budibase:
+    restart: unless-stopped
+    image: budibase/budibase:latest
+    ports:
+      - 10000:80
+    environment:
+      API_ENCRYPTION_KEY: ONHdZ7YDv5kQgChWwPXbJ0bUHad8k8Cp
+      JWT_SECRET: Sj3AAGWFy5HP9Gg7WKbsLBebspfDW3Y4
+      MINIO_ACCESS_KEY: lmnDFgdw4LSNJ61xtKkWQwpTF39HZUyD
+      MINIO_SECRET_KEY: xZCALPJLo157z66j9TS0asJjhe06R8DY
+      REDIS_PASSWORD: JDQ5usMlsIUkGujhgC0HmsuxBzdBrRAJ
+      INTERNAL_API_KEY: 1pjmLgvDS74HVdkOYcjKnX9w66LFvtWu
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: XlmAPJujtzmI04VyPj3rHYbassq65FRm
+      PLUGINS_DIR: /plugins
+      BB_ADMIN_USER_EMAIL: admin@admin.com
+      BB_ADMIN_USER_PASSWORD: admin
+    volumes:
+      - budibase_data:/data
+      - /home/xg/workspace/github.com/budibase-plugins/super-embed:/plugins
+volumes:
+  budibase_data:
+    driver: local

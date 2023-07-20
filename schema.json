@@ -1,0 +1,21 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "super-embed",
+    "friendlyName": "super-embed",
+    "description": "An amazing Budibase component!",
+    "icon": "BoxAdd",
+    "settings": [
+      {
+        "type": "text",
+        "key": "text",
+        "label": "Embed",
+        "required": true
+      }
+    ],
+    "styles": [
+      "size"
+    ]
+  }
+}
